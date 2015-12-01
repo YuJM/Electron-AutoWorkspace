@@ -14,21 +14,21 @@
 ##Process (과정)
 ---
 
->###1. ```# npm install -g gulp```
+###1. ```# npm install -g gulp```
 
->###2. ```# npm install -g electron-prebuilt```
+###2. ```# npm install -g electron-prebuilt```
 
->###3. ```# npm install -g typescript```
+###3. ```# npm install -g typescript```
 
->###4. ```# git clone https://github.com/YuJM/auto-electron-workspace.git```
+###4. ```# git clone https://github.com/YuJM/auto-electron-workspace.git```
 
->###5. ```# cd auto-electron-workspace```
+###5. ```# cd auto-electron-workspace```
 
->###6. ```# npm install```
+###6. ```# npm install```
 
 ##and
 
->###7. ```# gulp ```
+###7. ```# gulp ```
 
 >## Run!!! Electron
 >## try to modify ```sapp/index.html``` autoreplace electron!
