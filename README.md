@@ -7,6 +7,8 @@
 
 > typescript
 
+##Support
+
 
 ##Process (과정)
 ---
@@ -25,9 +27,13 @@
 
 ##and
 
-###7, ```# gulp ```
+>###7. ```# gulp ```
 
-##You should working in ```/sapp``` directory
+>## Run!!! Electron
+>## try to modify ```sapp/index.html``` autoreplace electron!
+
+> ##You should working in ```/sapp``` directory
+> ##Output ```app``` directory!!!
 
 
 
