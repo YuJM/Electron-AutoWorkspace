@@ -1,15 +1,15 @@
 
 #Auto-electron-workspace
 
-##Dependence
+##Dependence (의존)
  
-> node.js
+>### node.js
 
-> typescript
+>### typescript
 
-##Support
+##Support (지원)
 
-> converting typescript,less 
+>### converting typescript,less 
 
 ##Process (과정)
 ---
