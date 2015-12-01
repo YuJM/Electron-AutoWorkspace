@@ -9,6 +9,7 @@
 
 ##Support
 
+> converting typescript,less 
 
 ##Process (과정)
 ---
@@ -32,8 +33,8 @@
 >## Run!!! Electron
 >## try to modify ```sapp/index.html``` autoreplace electron!
 
-> ##You should working in ```/sapp``` directory
-> ##Output ```app``` directory!!!
+> ##You should working in ```sapp/``` directory
+> ##Output ```app/``` directory!!!
 
 
 
