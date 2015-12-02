@@ -20,7 +20,7 @@
 
 ###3. ```# npm install -g typescript```
 
-###4. ```# git clone https://github.com/YuJM/auto-electron-workspace.git```
+###4. ```# git clone https://github.com/YuJM/Electron-AutoWorkspace.git```
 
 ###5. ```# cd auto-electron-workspace```
 
