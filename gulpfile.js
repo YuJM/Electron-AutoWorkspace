@@ -76,15 +76,16 @@ function generProcess(cvArr){
 			var cvLength= cvFiles.length;
 			var isCvt=false;
 
+			if(!targetExt){
+				return;
+			}
+
 			for (var i=0;i<cvLength;i++){
 				if(targetExt === '.'+cvFiles[i].srcForm){
 					cvFile=cvFiles[i];
 					isCvt=true;
 				}
-			}
-			if(!targetExt){
-				return;
-			}
+			}			
 			// console.log('srcPath:',srcPath);   
 			// console.log('dstPath:',dstPath);
 			// console.log('cvFile:',cvFile);          
@@ -95,8 +96,7 @@ function generProcess(cvArr){
 						coPipe.pipe(gulp.dest(dstPath));
 					}			
 			}else{
-				removeFile(srcPath,cvFile);
-				
+				removeFile(srcPath,cvFile);				
 			}
 	}
 
@@ -105,13 +105,13 @@ function generProcess(cvArr){
 
 gulp.task('watch',function(){
 	liveReload.listen();
-	// console.log(gulp.watch('sapp/**'));
 	gulp.watch('sapp/**').on('change',generProcess(cvInArr));
     gulp.watch('app/**').on('change',liveReload.changed);
 });
 
 gulp.task('run',function  () {
-	return exec('electron app/app.js',function(err){		
+	return exec('electron app/app.js',function(err){
+	console.log(err);		
 	});
 });
 
