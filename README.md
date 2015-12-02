@@ -1,5 +1,5 @@
 
-#Auto-electron-workspace
+#Electron-AutoWorkspace
 
 ##Dependence (의존)
  
