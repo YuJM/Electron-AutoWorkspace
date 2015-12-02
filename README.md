@@ -9,7 +9,7 @@
 
 ##Function (기능)
 
->### auto converting (typescript,less)
+>### Auto converting (typescript,less)
 
 ##Process (과정)
 ---
@@ -35,6 +35,8 @@
 
 > ##You should working in ```sapp/``` directory
 > ##Output ```app/``` directory!!!
+
+
 
 
 
