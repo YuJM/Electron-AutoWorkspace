@@ -7,9 +7,9 @@
 
 >### typescript
 
-##Support (지원)
+##Function (기능)
 
->### converting typescript,less 
+>### auto converting (typescript,less)
 
 ##Process (과정)
 ---

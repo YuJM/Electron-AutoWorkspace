@@ -12,9 +12,8 @@ var paths={
 		less:'sapp/css/*.less',
 		ts:'sapp/js/*.ts',
 		html:'sapp/**/*.html',
-		appjs:'sapp/app.js',
-		origin:'sapp/**/*',
-		css:'sapp/css/*.css'
+		js:'sapp/**/*.js',
+		css:'sapp/**/*.css'
 	},
 	dst:{
 		css:'app/css',
@@ -23,10 +22,8 @@ var paths={
 	}
 };
 
-gulp.task('copy-css',function(){
-	return gulp.src(paths.src.css)
-		   .pipe(gulp.dest(paths.dst.css));
-});
+var basicPath =[paths.src.html,paths.src.js,paths.src.css];
+
 gulp.task('compile-less',function (){
 	return gulp.src(paths.src.less)
 		   .pipe(less())
@@ -39,7 +36,7 @@ gulp.task('compile-ts',function(){
 
 });
 gulp.task('copy-file',function(){
-	 return gulp.src([paths.src.html,paths.src.appjs],{base:'sapp'})
+	 return gulp.src(basicPath,{base:'sapp'})
 	        .pipe(gulp.dest(paths.dst.origin));	 		
 });
 
@@ -63,13 +60,12 @@ function autoRemove(inExt){
 gulp.task('watch',function(){
 	liveReload.listen();
 	gulp.watch(paths.src.less,['compile-less']).on('change',autoRemove(".css"));
-	gulp.watch(paths.src.css,['copy-css']).on('change',autoRemove());
 	gulp.watch(paths.src.ts,['compile-ts']).on('change',autoRemove(".js"));
-	gulp.watch([paths.src.html,paths.src.appjs],['copy-file']).on('change',autoRemove());
+	gulp.watch(basicPath,['copy-file']).on('change',autoRemove());
     gulp.watch(paths.dst.origin+'/**').on('change',liveReload.changed);
 });
 
 gulp.task('run',function  () {
 	return exec('electron app/app.js',function(err){		
 	});
-});gulp.task('default',['copy-file','compile-ts','copy-css','compile-less','watch','run']);
+});gulp.task('default',['copy-file','compile-ts','compile-less','watch','run']);
