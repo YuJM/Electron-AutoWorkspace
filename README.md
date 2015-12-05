@@ -11,6 +11,8 @@
 
 >### Auto converting (typescript,less)
 
+>### File (delete,create) sync 
+
 ##Process (과정)
 ---
 
