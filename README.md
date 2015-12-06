@@ -24,7 +24,7 @@
 
 ###4. ```# git clone https://github.com/YuJM/Electron-AutoWorkspace.git```
 
-###5. ```# cd auto-electron-workspace```
+###5. ```# cd Electron-AutoWorkspace```
 
 ###6. ```# npm install```
 
