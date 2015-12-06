@@ -18,36 +18,6 @@ var cvInArr =[
 		},			
 	];
 
-var paths={
-	src:{
-		less:'sapp/**/*.less',
-		ts:'sapp/**/*.ts',
-		html:'sapp/**/*.html',
-		js:'sapp/**/*.js',
-		css:'sapp/**/*.css'
-	},
-	dst:'app'
-};
-
-var basicPath =[paths.src.html,paths.src.js,paths.src.css];
-
-gulp.task('compile-less',function (){
-	 	gulp.src(paths.src.less,{base:'sapp'})
-		   .pipe(less())
-		   .pipe(gulp.dest(paths.dst))
-});
-gulp.task('compile-ts',function(){
-       gulp.src(paths.src.ts,{base:'sapp'})
-		   .pipe(ts())
-		   .pipe(gulp.dest(paths.dst))
-
-});
-gulp.task('copy-file',function(){
-	  	gulp.src(basicPath,{base:'sapp'})
-	        .pipe(gulp.dest(paths.dst)) 		
-});
-
-
 function removeFile(sPath,cvFile){
 			var target = path.relative(path.resolve('sapp'),sPath);			
 			if(cvFile){
@@ -115,4 +85,4 @@ gulp.task('run',function  () {
 	});
 });
 
-gulp.task('default',['copy-file','compile-ts','compile-less','watch','run']);
+gulp.task('default',['watch','run']);
